@@ -31,7 +31,7 @@ class SignUpScreen extends StatelessWidget {
                   height: 80,
                   width: 80,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 59, 166, 253),
+                    color: Colors.blueAccent,
                     shape: BoxShape.circle,
                   ),
                   child: Center(
@@ -65,7 +65,7 @@ class SignUpScreen extends StatelessWidget {
                   'Please fill this detail to create an account',
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.grey,
+                    color: Color.fromARGB(255, 113, 112, 112),
                   ),
                 ),
                 const SizedBox(height: 30),
@@ -119,11 +119,11 @@ class SignUpScreen extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    backgroundColor: Color.fromARGB(255, 59, 166, 253),
+                    backgroundColor: Colors.blueAccent,
                   ),
                   child: const Text(
                     'Sign Up',
-                    style: TextStyle(fontSize: 18),
+                    style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),
                 const SizedBox(height: 20),
