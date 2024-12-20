@@ -19,22 +19,22 @@ class SignUpScreen extends StatelessWidget {
                   alignment: Alignment.topLeft,
                   child: IconButton(
                     onPressed: () {
-                      Navigator.pop(context); // Go back to the previous screen
+                      Navigator.pop(context);
                     },
                     icon: const Icon(Icons.arrow_back),
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 8),
 
                 // Placeholder for the logo
                 Container(
                   height: 80,
                   width: 80,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.blueAccent,
                     shape: BoxShape.circle,
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Icon(
                       Icons.health_and_safety,
                       color: Colors.white,
@@ -44,31 +44,36 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 const Text(
-                  'WeCare',
+                  'HealthBag',
                   style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
+                    fontSize: 28,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: 'OpenSans ExtraBold',
                   ),
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 5),
 
                 // Create Account text
                 const Text(
                   'Create an Account',
                   style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
+                    fontSize: 29,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: 'OpenSans ExtraBold',
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 const Text(
                   'Please fill this detail to create an account',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 18,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: 'OpenSans SemiBoldItalic',
                     color: Color.fromARGB(255, 113, 112, 112),
                   ),
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 20),
 
                 // Username field
                 TextField(
@@ -78,6 +83,10 @@ class SignUpScreen extends StatelessWidget {
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
+                  ),
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'OpenSans Bold',
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -92,6 +101,10 @@ class SignUpScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'OpenSans Bold',
+                  ),
                 ),
                 const SizedBox(height: 20),
 
@@ -105,6 +118,10 @@ class SignUpScreen extends StatelessWidget {
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
+                  ),
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'OpenSans Bold',
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -123,20 +140,29 @@ class SignUpScreen extends StatelessWidget {
                   ),
                   child: const Text(
                     'Sign Up',
-                    style: TextStyle(fontSize: 18, color: Colors.white),
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'OpenSans Bold',
+                    ),
                   ),
                 ),
                 const SizedBox(height: 20),
 
                 // OR Divider
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Expanded(child: Divider()),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Text(
                         'OR',
-                        style: TextStyle(color: Colors.grey),
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'OpenSans Bold',
+                        ),
                       ),
                     ),
                     Expanded(child: Divider()),
@@ -148,7 +174,15 @@ class SignUpScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("Already have an account? "),
+                    const Text(
+                      "Already have an account? ",
+                      style: TextStyle(
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: 'OpenSans SemiBoldItalic',
+                        fontSize: 18,
+                      ),
+                    ),
                     TextButton(
                       onPressed: () {
                         // Navigate to the LoginScreen
@@ -160,8 +194,11 @@ class SignUpScreen extends StatelessWidget {
                       },
                       child: const Text(
                         'Log In',
-                        style:
-                            TextStyle(color: Color.fromARGB(255, 0, 140, 255)),
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 0, 140, 255),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'OpenSans Bold',
+                        ),
                       ),
                     ),
                   ],

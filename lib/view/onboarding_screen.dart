@@ -15,7 +15,7 @@ class OnboardingScreen extends StatelessWidget {
       body: PageView(
         children: [
           // Page 1
-          OnboardingPage(
+          const OnboardingPage(
             imagePath: 'assets/images/landing22.jpg',
             title: "Welcome to \nHealthBag",
             description: "Your Health, Your Priority",
@@ -23,7 +23,7 @@ class OnboardingScreen extends StatelessWidget {
           ),
 
           // Page 2
-          OnboardingPage(
+          const OnboardingPage(
             imagePath: 'assets/images/landingg.jpg',
             title: "Book appointments \nseemlessly",
             description:

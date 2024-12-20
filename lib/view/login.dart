@@ -19,11 +19,11 @@ class LoginScreen extends StatelessWidget {
                 Container(
                   height: 80,
                   width: 80,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.blueAccent,
                     shape: BoxShape.circle,
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Icon(
                       Icons.health_and_safety,
                       color: Colors.white,
@@ -36,38 +36,43 @@ class LoginScreen extends StatelessWidget {
                   'HealthBag',
                   style: TextStyle(
                     fontSize: 28,
-                    fontWeight: FontWeight.bold,
+                    fontFamily: 'OpenSans ExtraBold',
                   ),
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 5),
 
                 // Welcome text
                 const Text(
                   'Welcome back!',
                   style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
+                    fontSize: 29,
+                    fontFamily: 'OpenSans ExtraBold',
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 const Text(
                   'Use Credentials to access your account',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 18,
+                    fontFamily: 'OpenSans SemiBoldItalic',
                     color: Color.fromARGB(255, 113, 112, 112),
                   ),
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 20),
 
                 // Username field
                 TextField(
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.person_outline),
+                    prefixIcon: const Icon(Icons.person_outline),
                     hintText: 'Enter Username',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
+                    hintStyle: const TextStyle(
+                      fontFamily: 'OpenSans Bold',
+                    ),
                   ),
+                  style: const TextStyle(fontFamily: 'OpenSans Bold'),
                 ),
                 const SizedBox(height: 20),
 
@@ -75,13 +80,17 @@ class LoginScreen extends StatelessWidget {
                 TextField(
                   obscureText: true,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.lock_outline),
-                    suffixIcon: Icon(Icons.visibility_off),
+                    prefixIcon: const Icon(Icons.lock_outline),
+                    suffixIcon: const Icon(Icons.visibility_off),
                     hintText: 'Enter Password',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
+                    hintStyle: const TextStyle(
+                      fontFamily: 'OpenSans Bold',
+                    ),
                   ),
+                  style: const TextStyle(fontFamily: 'OpenSans Bold'),
                 ),
                 const SizedBox(height: 10),
 
@@ -94,7 +103,10 @@ class LoginScreen extends StatelessWidget {
                     },
                     child: const Text(
                       'Forget password?',
-                      style: TextStyle(color: Colors.blue),
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontFamily: 'OpenSans Bold',
+                      ),
                     ),
                   ),
                 ),
@@ -119,7 +131,11 @@ class LoginScreen extends StatelessWidget {
                   ),
                   child: const Text(
                     'Log In',
-                    style: TextStyle(fontSize: 18, color: Colors.white),
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontFamily: 'OpenSans Bold',
+                    ),
                   ),
                 ),
               ],
