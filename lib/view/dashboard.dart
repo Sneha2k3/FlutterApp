@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/view/booking.dart';
+import 'package:flutterapp/view/profile.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -203,7 +205,12 @@ class DashboardScreen extends StatelessWidget {
                 size: 28,
               ),
               onPressed: () {
-                print("Appointments clicked!");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const BookingScreen(),
+                  ),
+                );
               },
             ),
             IconButton(
@@ -212,7 +219,11 @@ class DashboardScreen extends StatelessWidget {
                 size: 28,
               ),
               onPressed: () {
-                print("Profile clicked!");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProfileScreen()),
+                );
               },
             ),
           ],
