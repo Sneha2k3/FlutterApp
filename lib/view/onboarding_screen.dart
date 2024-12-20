@@ -77,11 +77,16 @@ class OnboardingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isPortrait =
+        MediaQuery.of(context).orientation == Orientation.portrait;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final titleFontSize = screenWidth * (isPortrait ? 0.08 : 0.06);
+    final descriptionFontSize = screenWidth * 0.04;
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        // Image at the top
         Expanded(
           flex: 2,
           child: Image.asset(
@@ -90,7 +95,6 @@ class OnboardingPage extends StatelessWidget {
             width: double.infinity,
           ),
         ),
-
         Expanded(
           flex: 1,
           child: Column(
@@ -101,10 +105,10 @@ class OnboardingPage extends StatelessWidget {
                 child: Text(
                   title,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Colors.black87,
-                    fontSize: 45,
-                    fontWeight: FontWeight.bold,
+                    fontSize: titleFontSize,
+                    fontFamily: 'OpenSans ExtraBold',
                   ),
                 ),
               ),
@@ -115,10 +119,10 @@ class OnboardingPage extends StatelessWidget {
                     child: Text(
                       slogan!,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        color: Color.fromARGB(255, 119, 119, 119),
-                        fontSize: 16,
-                        fontStyle: FontStyle.italic,
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 119, 119, 119),
+                        fontSize: descriptionFontSize,
+                        fontFamily: 'OpenSans SemiBoldItalic',
                       ),
                     ),
                   ),
@@ -129,9 +133,10 @@ class OnboardingPage extends StatelessWidget {
                   child: Text(
                     description,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Color.fromARGB(255, 95, 95, 95),
-                      fontSize: 16,
+                    style: TextStyle(
+                      color: const Color.fromARGB(255, 95, 95, 95),
+                      fontSize: descriptionFontSize,
+                      fontFamily: 'OpenSans Regular',
                     ),
                   ),
                 ),
@@ -139,7 +144,6 @@ class OnboardingPage extends StatelessWidget {
             ],
           ),
         ),
-
         Padding(
           padding: const EdgeInsets.only(bottom: 20.0),
           child: Column(
@@ -179,7 +183,7 @@ class OnboardingPage extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                          fontFamily: 'OpenSans ExtraBold',
                         ),
                       ),
                     ),
