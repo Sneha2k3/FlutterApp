@@ -11,11 +11,15 @@ class DashboardScreen extends StatelessWidget {
         elevation: 0,
         title: const Text(
           'Hi, Ccr 👋',
-          style: TextStyle(color: Colors.black, fontSize: 20),
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+            fontFamily: 'OpenSans Regular',
+          ),
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 8.0), // Added padding
+            padding: const EdgeInsets.only(right: 8.0),
             child: IconButton(
               onPressed: () {
                 print("Notification clicked!");
@@ -23,7 +27,7 @@ class DashboardScreen extends StatelessWidget {
               icon: const Icon(
                 Icons.notifications_outlined,
                 color: Colors.black,
-                size: 32, // Increased size for the notification icon
+                size: 32,
               ),
             ),
           ),
@@ -38,8 +42,9 @@ class DashboardScreen extends StatelessWidget {
               const Text(
                 'Keep taking care\nof your health',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'OpenSans Bold',
                 ),
               ),
               const SizedBox(height: 16),
@@ -54,7 +59,9 @@ class DashboardScreen extends StatelessWidget {
                     hintText: 'Search',
                     prefixIcon: Icon(Icons.search),
                     border: InputBorder.none,
+                    hintStyle: TextStyle(fontFamily: 'OpenSans Regular'),
                   ),
+                  style: TextStyle(fontFamily: 'OpenSans Regular'),
                 ),
               ),
               const SizedBox(height: 24),
@@ -64,13 +71,20 @@ class DashboardScreen extends StatelessWidget {
                 children: [
                   const Text(
                     'Specialities',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'OpenSans Bold',
+                      fontSize: 20,
+                    ),
                   ),
                   TextButton(
                     onPressed: () {
                       print("See All Specialities clicked!");
                     },
-                    child: const Text('See All'),
+                    child: const Text(
+                      'See All',
+                      style: TextStyle(fontFamily: 'OpenSans Regular'),
+                    ),
                   ),
                 ],
               ),
@@ -111,13 +125,20 @@ class DashboardScreen extends StatelessWidget {
                 children: [
                   const Text(
                     'Popular Doctors',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'OpenSans Bold',
+                      fontSize: 20,
+                    ),
                   ),
                   TextButton(
                     onPressed: () {
                       print("See All Popular Doctors clicked!");
                     },
-                    child: const Text('See All'),
+                    child: const Text(
+                      'See All',
+                      style: TextStyle(fontFamily: 'OpenSans Regular'),
+                    ),
                   ),
                 ],
               ),
@@ -170,7 +191,7 @@ class DashboardScreen extends StatelessWidget {
             IconButton(
               icon: const Icon(
                 Icons.home_outlined,
-                size: 28, // Increased size for bottom navigation icons
+                size: 28,
               ),
               onPressed: () {
                 print("Home clicked!");
@@ -179,7 +200,7 @@ class DashboardScreen extends StatelessWidget {
             IconButton(
               icon: const Icon(
                 Icons.calendar_today_outlined,
-                size: 28, // Increased size for bottom navigation icons
+                size: 28,
               ),
               onPressed: () {
                 print("Appointments clicked!");
@@ -188,7 +209,7 @@ class DashboardScreen extends StatelessWidget {
             IconButton(
               icon: const Icon(
                 Icons.person_outline,
-                size: 28, // Increased size for bottom navigation icons
+                size: 28,
               ),
               onPressed: () {
                 print("Profile clicked!");
@@ -228,6 +249,7 @@ class DashboardScreen extends StatelessWidget {
             style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
+                fontFamily: 'OpenSans Bold',
                 color: Color.fromARGB(255, 73, 72, 72)),
           ),
         ],
@@ -273,12 +295,17 @@ class DashboardScreen extends StatelessWidget {
                 Text(
                   name,
                   style: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 14),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      fontFamily: 'OpenSans Bold'),
                 ),
                 const SizedBox(height: 4),
                 Text(
                   specialty,
-                  style: const TextStyle(fontSize: 12, color: Colors.grey),
+                  style: const TextStyle(
+                      fontSize: 12,
+                      fontFamily: 'OpenSans Regular',
+                      color: Colors.grey),
                 ),
               ],
             ),
