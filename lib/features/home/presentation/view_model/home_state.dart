@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+// import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeState extends Equatable {
   final int selectedIndex;
@@ -12,21 +13,13 @@ class HomeState extends Equatable {
 
   // Initial state
   static HomeState initial() {
-    return const HomeState(
+    return HomeState(
       selectedIndex: 0,
       views: [
-        Center(
+        const Center(
           child: Text('Dashboard'),
         ),
-        // BlocProvider(
-        //   create: (context) => getIt<CourseBloc>(),
-        //   child: CourseView(),
-        // ),
-        // BlocProvider(
-        //   create: (context) => getIt<BatchBloc>(),
-        //   child: BatchView(),
-        // ),
-        Center(
+        const Center(
           child: Text('Account'),
         ),
       ],

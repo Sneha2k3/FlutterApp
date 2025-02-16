@@ -1,6 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:hive_flutter/adapters.dart';
-
+import 'package:hive/hive.dart';
 import 'package:uuid/uuid.dart';
 
 import '../../../../app/constants/hive/hive_table_constant.dart';
@@ -13,22 +12,22 @@ class AuthHiveModel extends Equatable {
   @HiveField(0)
   final String? customerId;
   @HiveField(1)
-  final String fName;
+  final String firstName;
   @HiveField(2)
-  final String lName;
+  final String lastName;
   @HiveField(3)
   final String? image;
   @HiveField(4)
   final String phone;
   @HiveField(5)
   final String username;
-  @HiveField(8)
+  @HiveField(6)
   final String password;
 
   AuthHiveModel({
     String? customerId,
-    required this.fName,
-    required this.lName,
+    required this.firstName,
+    required this.lastName,
     this.image,
     required this.phone,
     required this.username,
@@ -38,8 +37,8 @@ class AuthHiveModel extends Equatable {
   // Initial Constructor
   const AuthHiveModel.initial()
       : customerId = '',
-        fName = '',
-        lName = '',
+        firstName = '',
+        lastName = '',
         image = '',
         phone = '',
         username = '',
@@ -49,8 +48,8 @@ class AuthHiveModel extends Equatable {
   factory AuthHiveModel.fromEntity(AuthEntity entity) {
     return AuthHiveModel(
       customerId: entity.userId,
-      fName: entity.fName,
-      lName: entity.lName,
+      firstName: entity.firstName,
+      lastName: entity.lastName,
       image: entity.image,
       phone: entity.phone,
       username: entity.username,
@@ -62,8 +61,8 @@ class AuthHiveModel extends Equatable {
   AuthEntity toEntity() {
     return AuthEntity(
       userId: customerId,
-      fName: fName,
-      lName: lName,
+      firstName: firstName,
+      lastName: lastName,
       image: image,
       phone: phone,
       username: username,
@@ -73,5 +72,5 @@ class AuthHiveModel extends Equatable {
 
   @override
   List<Object?> get props =>
-      [customerId, fName, lName, image, username, password];
+      [customerId, firstName, lastName, phone, image, username, password];
 }
