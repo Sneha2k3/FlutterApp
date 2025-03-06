@@ -28,7 +28,7 @@ class DashboardScreen extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: const Icon(Icons.brightness_6),
+              icon: const Icon(Icons.brightness_5),
               onPressed: () {
                 context.read<ThemeProvider>().toggleTheme();
               },
