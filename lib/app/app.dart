@@ -1,24 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:healthbag/features/splash/presentation/onboarding_screen.dart';
+import 'package:flutterapp/core/app_theme/app_theme.dart';
+import 'package:flutterapp/core/app_theme/theme_provider.dart';
+import 'package:flutterapp/view/dashboard.dart';
+import 'package:provider/provider.dart';
 
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MyApp(),
+    ),
+  );
+}
 
-import '../features/auth/presentation/view_model/login/login_bloc.dart';
-import 'di/di.dart';
-
-
-class App extends StatelessWidget {
-  const App({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Doctor Management',
-      home: BlocProvider.value(
-        value: getIt<LoginBloc>(),
-        child: OnboardingScreen(),
-      ),
+      title: 'HealthBag',
+      theme: getApplicationTheme(
+          isDarkMode: Provider.of<ThemeProvider>(context).isDarkMode),
+      home: const Dashboard(),
     );
   }
 }
