@@ -1,8 +1,7 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class ThemeConstant {
-//   ThemeConstant._();
-//   static const Color darkPrimaryColor = Colors.yellow;
-//   static const Color primaryColor = Colors.green;
-//   static const Color appBarColor = Colors.green;
-// }
+class ThemeConstant {
+  ThemeConstant._();
+  static const Color darkPrimaryColor = Color.fromARGB(255, 28, 34, 39);
+  static const Color lightPrimaryColor = Color.fromARGB(255, 250, 250, 250);
+}
